@@ -1,6 +1,6 @@
 For running project follow given steps 
 
-#clone the project repository 
+#clone the project repository                                                                                            
 step 1 : git clone https://github.com/Jainam513/LSSES.git
 
 #Open Project Directory to run a project
