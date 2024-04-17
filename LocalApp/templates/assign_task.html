@@ -1,0 +1,63 @@
+{% extends 'admin_base.html' %}
+
+{% block main %}
+<div class="card shadow">
+    <div class="card-body">
+        <h5 class="p-2" style="border-bottom: 2px solid orange;">Give Order Details To Worker</h5>
+        <div class="container-fluid">
+            <form action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="form-label" for="workerType">Worker Type</label>
+                            <select name="category" class="form-control" id="workerType">
+                                <option value="">Select Worker Type</option>
+                                {% for w in worker %}
+                                    <option value="{{ w.id }}">{{ w.professional }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="form-label" for="worker">Select Worker</label>
+                            <select name="category1" class="form-control" id="worker">
+                                <option value="">Select Worker</option>
+                                {% for w in worker %}
+                                    <option value="{{ w.id }}">{{ w.user.first_name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="form-label" for="workerEmail">Worker E-mail</label>
+                            <input type="email" id="workerEmail" name="email" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="form-label" for="orderID">Order ID</label>
+                            <input type="text" id="orderID" name="order" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="form-label" for="username">Username</label>
+                            <input type="text" id="username" name="name" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="form-label" for="userAddress">User Address</label>
+                            <input type="text" id="userAddress" name="add" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="Submit" class="m-2 px-3 btn btn-primary">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
