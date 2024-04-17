@@ -10,10 +10,10 @@ step 2 : cd LSSES/
 step 3 : sudo apt install python3-venv
 
 #create python virtual environment                                                                                      
-step 4 : python3 -m venv <env-name>
+step 4 : python3 -m venv env-name
 
 #activate python virtual environment                                                                                    
-step 5 : source <env-name>/bin/activate
+step 5 : source env-name/bin/activate
 
 #in virtual environment install django for running project                                                               
 step 6 : pip install django
