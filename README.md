@@ -34,3 +34,5 @@ step 10 : docker build -t my-django-app .
 step 11: docker run -p 8000:8000 my-django-app
 
 #access the project through dockerfile by localhost:8000/ 
+#access the django framework page through localhost:8000/admin/
+#access the admin panel through localhost:8000/admin-login/
