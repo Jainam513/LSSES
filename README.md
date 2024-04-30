@@ -1,4 +1,4 @@
-For running project follow given steps 
+For running project follow given steps in Virtual Machine
 
 #clone the project repository                                                                                            
 step 1 : git clone https://github.com/Jainam513/LSSES.git
@@ -27,11 +27,13 @@ step 8 : pip install razorpay
 #this for running project  without dockerfile                                                                            
 step 9 : python manage.py runserver
 
-#build the docker image                                                                                                 
-step 10 : docker build -t my-django-app .
 
-#run the docker image                                                                                                   
-step 11: docker run -p 8000:8000 my-django-app
+Run  Project through Dockerfile                                                                                             
+step 1 : docker build -t my-django-app .                                                                                                   
+step 2: docker run -p 8000:8000 my-django-app
+
+Run Project through docker-compose.yml file
+step 1 : docker-compose up
 
 #access the project through dockerfile by localhost:8000/                                                                                                              
 #access the django framework page through localhost:8000/admin/                                                                                                        
