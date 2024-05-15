@@ -2,7 +2,7 @@ version: '3'
 
 services:
   web:
-    image: jainam05/lsses_web:latest
+    image: jainam05/lsses:latest
     ports:
       - "8000:8000"
     environment:
