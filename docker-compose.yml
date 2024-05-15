@@ -4,7 +4,7 @@ services:
   web:
     image: jainam05/lsses:latest
     ports:
-      - "8000:8000"
+      - "1235:8000"
     environment:
       - EMAIL_BACKEND=django.core.mail.backends.smtp.EmailBackend
       - EMAIL_HOST_USER='shahjainam6411@gmail.com'
